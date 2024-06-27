@@ -96,7 +96,7 @@ if page == 'OCR Verification':
 			st.stop()
 
 		full_name = st.text_input('Full Name', max_chars=30, placeholder=p_name)
-		citizenship_number = st.text_input('Citizenship number (without symbols)', max_chars=15, placeholder=p_citizenship_number)
+		citizenship_number = st.text_input('Citizenship number (without symbols)', max_chars=16, placeholder=p_citizenship_number)
 		birth_address = st.text_input('Birth Address', max_chars=30, placeholder=p_birth_district)
 		permanent_address = st.text_input('Permanent Address', max_chars=30, placeholder=p_permanent_district)
 		try:
@@ -117,10 +117,10 @@ if page == 'OCR Verification':
 			if get_string_similarity(str(citizenship_number), str(p_citizenship_number)) > 0.8:
 				st.subheader('OCR Verification Successful')
 				st.subheader('Head to Next Page: Facematch Verification')
-				legacy_caching.clear_cache()
+				# legacy_caching.clear_cache()
 			else:
 				st.subheader('OCR Verification Failed, Enter Correct Information')
-				legacy_caching.clear_cache()
+				# legacy_caching.clear_cache()
 
 elif page == 'FaceMatch and Liveness Verification':
 	if citizenship_front is None or citizenship_back is None:
@@ -177,7 +177,7 @@ elif page == 'FaceMatch and Liveness Verification':
 				break
 			
 
-			# 	print("pose", headpose_liveness.get_head_pose(selfie_image))
+	# 			print("pose", headpose_liveness.get_head_pose(selfie_image))
 	# if face_match == True:
 	# 	if not liveness:
 	# 		ctx = webrtc_streamer(

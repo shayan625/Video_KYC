@@ -16,7 +16,7 @@ This project implements an **AI-powered Video KYC (Know Your Customer) system**,
 - **Frontend:** Streamlit  
 - **Machine Learning:** OpenCV, Deep Learning models  
 - **Database:** MongoDB  
-- **Other Tools:** PyTorch  
+- **Other Tools:** PyTorch.
 
 ## ⚡ Setup & Installation  
 
